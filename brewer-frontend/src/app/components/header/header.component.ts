@@ -12,4 +12,26 @@ export class HeaderComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  //following functions are PackML commands taken from the example website in "projektoplæg"
+
+  onStartClicked(){
+    //function for starting the machine
+  }
+
+  onStopClicked() {
+    //function for stopping the machine
+  }
+
+  onResetClicked() {
+  //function for reseting the machine
+  }
+
+  onAbortClicked() {
+  //function for aborting a operation
+  }
+
+  onClearClicked() {
+  //function to clear
+  }
+
 }
