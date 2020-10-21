@@ -17,27 +17,26 @@ export class HeaderComponent implements OnInit {
 
   onStartClicked(){
     //function for starting the machine
-    this.snackBar.open('Machine is Started');
+    this.snackBar.open('Machine is Started', 'OK');
   }
 
   onStopClicked() {
     //function for stopping the machine
-    this.snackBar.open('Machine is Stopped');
+    this.snackBar.open('Machine is Stopped', 'OK');
   }
 
   onResetClicked() {
   //function for reseting the machine
-    this.snackBar.open('Machine is Reseted');
+    this.snackBar.open('Machine is Reseted', 'OK');
   }
 
   onAbortClicked() {
   //function for aborting a operation
-    this.snackBar.open('Aborted operation');
+    this.snackBar.open('Aborted operation', 'OK');
   }
 
   onClearClicked() {
   //function to clear
-    this.snackBar.open('Cleared operations');
+    this.snackBar.open('Cleared operations', 'OK');
   }
-
 }
