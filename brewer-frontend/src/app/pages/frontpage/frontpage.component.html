@@ -1,11 +1,15 @@
-<mat-grid-list cols="4">
-  <mat-grid-tile colspan="1">
-    <mat-grid-tile-footer>Data display</mat-grid-tile-footer>
+<mat-grid-list cols="4" rowHeight="2:1">
+  <mat-grid-tile colspan="1" rowspan="3">
+    <mat-grid-tile-footer>Logs</mat-grid-tile-footer>
   </mat-grid-tile>
-  <mat-grid-tile colspan="2">
+  <mat-grid-tile colspan="2" rowspan="2">
+    <app-invstatus></app-invstatus>
     <mat-grid-tile-footer>Inventory status</mat-grid-tile-footer>
   </mat-grid-tile>
-  <mat-grid-tile colspan="1">
+  <mat-grid-tile colspan="1" rowspan="3">
     <mat-grid-tile-footer>Maintenance status</mat-grid-tile-footer>
+  </mat-grid-tile>
+  <mat-grid-tile colspan="2" rowspan="2">
+    <mat-grid-tile-footer>Data display</mat-grid-tile-footer>
   </mat-grid-tile>
 </mat-grid-list>
