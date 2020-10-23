@@ -13,6 +13,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FrontpageComponent } from './pages/frontpage/frontpage.component';
 import { InvstatusComponent } from './components/invstatus/invstatus.component';
 import { InvstatusItemComponent } from './components/invstatus-item/invstatus-item.component';
+import { DatadisplayComponent } from './components/datadisplay/datadisplay.component';
+import { DataitemComponent } from './components/dataitem/dataitem.component';
 
 
 @NgModule({
@@ -21,7 +23,9 @@ import { InvstatusItemComponent } from './components/invstatus-item/invstatus-it
     HeaderComponent,
     FrontpageComponent,
     InvstatusComponent,
-    InvstatusItemComponent
+    InvstatusItemComponent,
+    DatadisplayComponent,
+    DataitemComponent
   ],
   imports: [
     BrowserModule,
