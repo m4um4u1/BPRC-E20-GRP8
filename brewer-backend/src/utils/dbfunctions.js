@@ -1,4 +1,4 @@
-const Project = require('../models/project');
+//import models
 
 //async function getAllProjects() {
 //    return Project.find();
