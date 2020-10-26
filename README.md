@@ -3,4 +3,4 @@
 
 
 Create a .env file in the src folder with your mondodb url something like DBURI=
-mongodb+srv://PAiiN:<password>@cluster0.pnorh.mongodb.net/<dbname>?retryWrites=true&w=majority and PORT=3000
+mongodb+srv://PAiiN:<password>@cluster0.pnorh.mongodb.net/BPRC?retryWrites=true&w=majority and PORT=3000
