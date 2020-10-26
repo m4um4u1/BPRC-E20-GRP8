@@ -11,6 +11,8 @@
   "dependencies": {
     "node-opcua": "^2.22.0",
     "mongoose": "^5.10.10",
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0"
   }
 }
