@@ -46,4 +46,6 @@ testem.log
 Thumbs.db
 
 # environment variables
+.env
 brewer-backend/src/.env
+
