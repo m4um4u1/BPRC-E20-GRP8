@@ -48,4 +48,5 @@ Thumbs.db
 # environment variables
 .env
 data-backend/src/.env
+node_modules
 
