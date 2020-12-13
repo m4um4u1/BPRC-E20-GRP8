@@ -1,5 +1,11 @@
 import { ClientSubscription, ReadValueIdLike, AttributeIds, MonitoringParametersOptions, ClientMonitoredItem, TimestampsToReturn, DataValue } from "node-opcua";
 import OpcuaClient from "./OpcuaClient";
+import { KafkaClient, Producer } from 'kafka-node';
+let kafkaHost = 'localhost:9092'
+var client = new KafkaClient({ kafkaHost });
+var producer = new Producer(client);
+
+producer.on('ready', function(){console.log('Connected to Kafka!');});
 
 export class Subscriptions {
 
@@ -13,6 +19,7 @@ export class Subscriptions {
 
     constructor() {
         this.client = new OpcuaClient();
+        this.getValue();
     }
 
     public async getValue() {
@@ -60,7 +67,13 @@ export class Subscriptions {
         );
 
         batchValueItem.on("changed", (dataValue: DataValue) => {
-            const dv = dataValue.value.value;
+            producer.send([
+                {topic: 'brewer_data',
+                    messages:[dataValue.value.value]
+                }], function(err, data){
+                if (err){ console.log('Error sending: ', err); }
+                else{ console.log('Successfully published: ' + new Date() + ', ' + data) }
+            });
         });
     }
 }
