@@ -1,9 +1,10 @@
 import { ClientSubscription, ReadValueIdLike, AttributeIds, MonitoringParametersOptions, ClientMonitoredItem, TimestampsToReturn, DataValue } from "node-opcua";
 import OpcuaClient from "./OpcuaClient";
 import { KafkaClient, Producer } from 'kafka-node';
-let kafkaHost = 'localhost:9092'
-var client = new KafkaClient({ kafkaHost });
-var producer = new Producer(client);
+
+let kafkaHost = 'localhost:9092';
+let client = new KafkaClient({kafkaHost});
+let producer = new Producer(client);
 
 producer.on('ready', function(){console.log('Connected to Kafka!');});
 
@@ -14,8 +15,6 @@ export class Subscriptions {
     private subscription;
 
     private client;
-
-    private valueMap = new Map();
 
     constructor() {
         this.client = new OpcuaClient();
