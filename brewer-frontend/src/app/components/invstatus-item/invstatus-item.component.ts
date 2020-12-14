@@ -16,5 +16,4 @@ export class InvstatusItemComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
 }
